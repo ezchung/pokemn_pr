@@ -34,3 +34,5 @@ function Pokecard({ pokemon }: { pokemon: Pokemon }){
 }
 
 export default Pokecard
+
+export type {Pokemon}
