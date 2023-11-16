@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Pokecard from './Pokecard';
 import Pokedex from './Pokedex';
+import Pokegame from './Pokegame';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <h1 className='App-title'>Pokegame</h1>
       <Pokedex pokemons={POKEMONS}></Pokedex>
+      <Pokegame pokemons={POKEMONS}></Pokegame>
     </div>
   );
 }
