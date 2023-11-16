@@ -1,3 +1,5 @@
+import { Pokemon } from './Pokecard';
+import { PokemonList } from './Pokedex';
 import './Pokegame.css';
 
 /**
@@ -7,7 +9,16 @@ import './Pokegame.css';
  *  - sends isWinner, pokemon, 
  */
 
-function Pokegame(){
+function Pokegame({pokemons}: {pokemons: PokemonList}){
+    //shuffle the array using Fisher-Yates algo
+    function shufflePokemons(pkmns: PokemonList): PokemonList {
+        for (let i = pkmns.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [pkmns[i], pkmns[j]] = [pkmns[j], pkmns[i]];
+        }
+        return pkmns;
+    }
+
     
 }
 
