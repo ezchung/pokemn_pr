@@ -2,12 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Pokecard from './Pokecard';
+import Pokedex from './Pokedex';
+
 
 function App() {
   return (
     <div className="App">
       <h1 className='App-title'>Pokegame</h1>
       <Pokecard pokemon={POKEMONS[2]}></Pokecard>
+      <Pokedex pokemons={POKEMONS}></Pokedex>
     </div>
   );
 }
