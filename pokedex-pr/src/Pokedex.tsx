@@ -23,3 +23,4 @@ function Pokedex({pokemons}: {pokemons: PokemonList}){
 }
 
 export default Pokedex;
+export type {PokemonList}
