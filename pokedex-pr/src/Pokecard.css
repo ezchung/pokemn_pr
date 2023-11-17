@@ -1,15 +1,3 @@
-.Pokecard {
-    display: inline-block;
-    vertical-align: top;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    width: 300px;
-    background-color: #E5E4E2;
-    margin: 10px;
-}
-
 /* 
  .Pokecard {
     display: flex;
@@ -27,6 +15,36 @@ With updated CSS using display: inline-block (renders the Pokecards horizontally
 The vertical align: top is used to align the top edges of the pokecards
 Margin added to create space
 */
+
+.Pokecard {
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    background-color: #E5E4E2;
+    margin: 10px;
+}
+
+
+.Pokecard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+   
+.Pokecard-inner.flip {
+    transform: rotateY(180deg);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .Pokecard-name {
     font-size: 24px;
