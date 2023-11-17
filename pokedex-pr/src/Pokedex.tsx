@@ -12,9 +12,15 @@ import {Pokemon} from './Pokecard';
  */
 type PokemonList = Pokemon[];
 
-function Pokedex({pokemons}: {pokemons: PokemonList}){
+function Pokedex({pokemons, isWinner, player}: {pokemons: PokemonList, isWinner:Number, player:Number}){
+    let winnerMessage;
+    if(isWinner === player){
+        winnerMessage = <h3>Player {`${isWinner}`} Wins!!!</h3>
+    }
+
     return(
         <div className="Pokedex container">
+            {winnerMessage}
             <div className="row">
                 {pokemons.map(p=> <Pokecard pokemon={p}/>)}
             </div>
