@@ -32,15 +32,12 @@ function Pokecard({ pokemon }: { pokemon: Pokemon }){
         <div className='Pokecard'>
             <div className='Pokecard-container'>
                 <div className={`Pokecard-inner ${flip ? 'flip' : ''}`} onClick={handleFlip}>
-                    {flip ? 
-                        <div className="Pokecard-front">
-                            <p className="Pokecard-name">{pokemon.name}</p>
-                            <img className="Pokecard-img"src={POKE_IMG} alt={pokemon.name} />
-                            <p className="Pokecard-type">Type: {pokemon.type}</p>
-                            <p className="Pokecard-exp">Exp: {pokemon.base_experience}</p>
-                        </div>
-                        : ""
-                    }
+                    <div className="Pokecard-front">
+                        <p className="Pokecard-name">{pokemon.name}</p>
+                        <img className="Pokecard-img"src={POKE_IMG} alt={pokemon.name} />
+                        <p className="Pokecard-type">Type: {pokemon.type}</p>
+                        <p className="Pokecard-exp">Exp: {pokemon.base_experience}</p>
+                    </div>
                 </div>
             </div>
         </div>
