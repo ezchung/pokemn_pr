@@ -1,5 +1,5 @@
 import { Pokemon } from './Pokecard';
-import { PokemonList } from './Pokedex';
+import Pokedex, { PokemonList } from './Pokedex';
 import './Pokegame.css';
 
 /**
@@ -39,9 +39,16 @@ function Pokegame({pokemons}: {pokemons: PokemonList}){
     else if(player2Exp > player1Exp) winner = 2;
     else winner = 0;
 
-    return <div>
-        <p>{`${player1Exp} is player 1. ${player2Exp} for player 2`}</p>
-    </div>
+    return(
+        <div>
+            <p>{`Player 1: ${player1Exp}`}</p>
+            <p>{`Player 2: ${player2Exp}`}</p>
+            <h2>Player 1</h2>
+            <Pokedex pokemons={player1} isWinner={winner} player={1} ></Pokedex>
+            <h2>Player 2</h2>
+            <Pokedex pokemons={player2} isWinner={winner} player={2}></Pokedex>
+        </div>
+    )
 }
 
 export default Pokegame;
@@ -58,3 +65,10 @@ Pokegame determines which hand is the winner, where the winning hand is the one 
 - Then modify the Pokedex component so that it accepts a prop of isWinner
 - The winning pokedex is the winning one, displays the message "This Hand Wins"
 */
+
+/*
+ * Later can add. User can directly choose which card they want to select. 
+All cards start face down. and once a player chooses. The card go to the hand of the player
+At the end the experience is calculated or can be calculated along the way.
+This can help with working with useState
+ */
