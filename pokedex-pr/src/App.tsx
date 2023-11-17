@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <h1 className='App-title'>Pokegame</h1>
-      <Pokedex pokemons={POKEMONS}></Pokedex>
       <Pokegame pokemons={POKEMONS}></Pokegame>
     </div>
   );
